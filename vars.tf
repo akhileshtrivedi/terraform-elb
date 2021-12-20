@@ -1,0 +1,22 @@
+variable "aws_region" {
+  default = "ap-south-1"
+}
+variable "vpc_cidr" {
+  default = "10.0.0.0/16"
+}
+variable "subnets_cidr" {
+  type    = list(any)
+  default = ["10.0.1.0/24", "10.0.2.0/24"]
+}
+variable "azs" {
+  type    = list(any)
+  default = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
+}
+variable "my_ami" {
+  default = "ami-0002bdad91f793433"
+}
+
+variable "instance_type" {
+  description = "instance type for aws ec2"
+  default     = "t2.micro"
+}
